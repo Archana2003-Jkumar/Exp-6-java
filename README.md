@@ -1,68 +1,41 @@
 # Exp-6-java
 ## Aim:
-To code a program that fins the number of day in a month.
+To code a program that produces output of power value for the corresponding base and exponnent.
 ## Algorithm:
 ### Step1:
 Import the required packages.
 ### Step2:
-Using switch statement for each case give the respective days.
+Using for loop find thr respective power.
 ### Step3:
-Respect to the user input display the result.
+With respect to the user input display the result.
 ## Code:
 ```
 import java.util.Scanner;
-public class Main
-{
-    public static void main(String[] args)
-    {
-        Scanner input=new Scanner(System.in);
-        System.out.println("Enter the month number: ");
-        int month=input.nextInt();
-        switch(month)
+public class Exp6 {
+         static int power(int base, int exponent)
         {
-            case 1:
-                System.out.println("31 days");
-                break;
-            case 2:
-                System.out.println("28 days");
-                break;
-            case 3:
-                System.out.println("31 days");
-                break;
-            case 4:
-                System.out.println("30 days");
-                break;
-            case 5:
-                System.out.println("31 days");
-                break;
-            case 6:
-                System.out.println("30 days");
-                break;
-            case 7:
-                System.out.println("31 days");
-                break;
-            case 8:
-                System.out.println("31 days");
-                break;
-            case 9:
-                System.out.println("30 days");
-                break;
-            case 10:
-                System.out.println("31 days");
-                break;
-            case 11:
-                System.out.println("30 days");
-                break;
-            case 12:
-                System.out.println("31 days");
-                break;
-            default:
-                System.out.println("Enter appropriate month");
+            int power = 1;
+             for (int i = 1; i <= exponent; i++)
+                 power = power * base;
+             return power;
+        }
+        public static void main(String args[])
+        {
+            int base, exponent;
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter the base: ");
+            base=sc.nextInt();
+            System.out.print("Enter the exponent: ");
+            exponent=sc.nextInt();
+
+            int pow=power(base, exponent);
+             System.out.println(base +" to the power " +exponent + " is: "+pow);
         }
     }
-}
+
+
 ```
 ## Output:
-![image](https://github.com/Archana2003-Jkumar/Exp3-java/assets/93427594/c24699ba-2c51-4436-8f53-b26167a3c280)
+![image](https://github.com/Archana2003-Jkumar/Exp-6-java/assets/93427594/a86348f2-17f1-4c90-a9b8-709561dab624)
 ## Result:
 Hence the program has been successfully executed.
